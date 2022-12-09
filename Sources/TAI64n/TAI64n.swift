@@ -1,14 +1,14 @@
 import Foundation
 import RegexBuilder
 
-@available(macOS 13.0, iOS 16.0, tvOS 16.0, watchOS 9.0, *)
+@available(macOS 13, iOS 16, tvOS 16, watchOS 9, *)
 extension Date {
 	
 	static var taiT0: UInt64 {
 		get { 4_611_686_018_427_387_914 }
 	}
 	init?(tai64nLabel: String) {
-		var str = tai64nLabel
+		let str = tai64nLabel
 
 		let labelregex = Regex {
 			Optionally("@")
