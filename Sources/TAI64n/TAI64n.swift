@@ -76,3 +76,6 @@ extension Date {
 	}
 }
 
+public struct TAI64n {
+	
+}
