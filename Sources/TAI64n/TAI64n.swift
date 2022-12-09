@@ -7,7 +7,7 @@ extension Date {
 	static var taiT0: UInt64 {
 		get { 4_611_686_018_427_387_914 }
 	}
-	init?(tai64nLabel: String) {
+	public init?(tai64nLabel: String) {
 		let str = tai64nLabel
 
 		let labelregex = Regex {
@@ -42,7 +42,7 @@ extension Date {
 		}
 	}
 	
-	var tai64nlabel: String {
+	public var tai64nlabel: String {
 		get {
 			let epoch = self.timeIntervalSince1970
 			let billion: TimeInterval = TimeInterval(1_000_000_000.0)
